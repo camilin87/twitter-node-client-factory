@@ -1,0 +1,23 @@
+{
+  "name": "twitter-node-client-factory",
+  "version": "1.0.0",
+  "description": "Seamlessly create a twitter-node-client while reading the configuration from the environment",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilin87/twitter-node-client-factory.git"
+  },
+  "keywords": [
+    "twitter",
+    "factory"
+  ],
+  "author": "@camilin87",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camilin87/twitter-node-client-factory/issues"
+  },
+  "homepage": "https://github.com/camilin87/twitter-node-client-factory#readme",
+  "dependencies": {
+    "twitter-node-client": "0.0.6"
+  }
+}
