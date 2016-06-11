@@ -16,3 +16,18 @@ twitterClient.getUserTimeline({
 
 ## Dependencies  
 The environment variables `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` should be set.
+
+## Authenticated Requests  
+The created clients can be used to make API calls that require authentication.  
+
+```js
+var twitterClient = require("twitter-node-client-factory")("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET");
+
+twitterClient.postTweet({
+    status: 'Hello World!'
+}, (err, response, body) {
+    console.log('ERROR [%s]', err);
+}, (data) {
+    console.log('Data [%s]', data);
+});
+```
