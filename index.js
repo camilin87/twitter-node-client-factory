@@ -1,9 +1,19 @@
 var Twitter = require('twitter-node-client').Twitter;
 
-module.exports = function(accessToken, accessTokenSecret, callBackUrl){
+module.exports = function(accessToken, accessTokenSecret, callBackUrl,
+    consumerKeyEnvSettingName, consumerSecretEnvSettingName){
+
+    if (!consumerKeyEnvSettingName){
+        consumerKeyEnvSettingName = "TWITTER_CONSUMER_KEY";
+    }
+
+    if (!consumerSecretEnvSettingName){
+        consumerSecretEnvSettingName = "TWITTER_CONSUMER_SECRET";
+    }
+
     var config = {
-        "consumerKey": process.env.TWITTER_CONSUMER_KEY,
-        "consumerSecret": process.env.TWITTER_CONSUMER_SECRET
+        "consumerKey": process.env[consumerKeyEnvSettingName],
+        "consumerSecret": process.env[consumerSecretEnvSettingName]
     };
 
     if (accessToken){
