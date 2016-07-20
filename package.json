@@ -1,6 +1,6 @@
 {
   "name": "twitter-node-client-factory",
-  "version": "1.0.4-beta.0",
+  "version": "1.0.4-beta.1",
   "description": "Seamlessly create a twitter-node-client while reading the configuration from the environment",
   "main": "index.js",
   "repository": {
